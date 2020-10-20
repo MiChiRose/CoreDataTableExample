@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Rpv-b3-kQI">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--ToDoListCoreData-->
+        <scene sceneID="y0S-pv-Jsy">
+            <objects>
+                <tableViewController id="Wrb-Sn-xFd" customClass="TableViewController" customModule="ToDoListCoreData" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="moy-Ib-OR6">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="Fxt-HZ-2MD">
+                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Fxt-HZ-2MD" id="Tle-cO-pSK">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Wrb-Sn-xFd" id="oxa-Yk-Ndw"/>
+                            <outlet property="delegate" destination="Wrb-Sn-xFd" id="UqD-tq-2Fq"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="ToDoListCoreData" id="1pk-02-6nQ">
+                        <barButtonItem key="leftBarButtonItem" systemItem="trash" id="H0v-hS-gkF">
+                            <connections>
+                                <action selector="deleteTasks:" destination="Wrb-Sn-xFd" id="k0B-vg-oF1"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="64j-Zm-vXd">
+                            <connections>
+                                <action selector="addTasks:" destination="Wrb-Sn-xFd" id="RLT-8H-27C"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="c5A-Ky-9n2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="851" y="151"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="mx1-xh-R05">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Rpv-b3-kQI" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="JLW-H4-p19">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Wrb-Sn-xFd" kind="relationship" relationship="rootViewController" id="I0K-os-6TZ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UMt-hl-2ea" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="144.92753623188406" y="150.66964285714286"/>
+        </scene>
+    </scenes>
+</document>
